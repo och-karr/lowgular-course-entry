@@ -1,0 +1,8 @@
+<ul *ngIf="data$ | async as data; else empty">
+  <li *ngFor="let employee of data">
+    <img src="{{ employee.image }}" alt="{{ employee.name }}">
+    <p>{{ employee.name }}</p>
+  </li>
+</ul>
+
+<ng-template #empty></ng-template>
