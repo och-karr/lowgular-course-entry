@@ -1,6 +1,7 @@
-<ul *ngIf="data$ | async as data; else empty">
-  <li *ngFor="let employee of data">
-    <img src="{{ employee.image }}" alt="{{ employee.name }}">
+<ul class="employees-faces-list" *ngIf="data$ | async as data; else empty"
+  style="display: flex; padding: 0;">
+  <li *ngFor="let employee of data" style="list-style-type: none; padding: 20px;">
+    <img [src]="employee.image" [alt]="employee.name" style="width: 100%; max-width: 200px;">
     <p>{{ employee.name }}</p>
   </li>
 </ul>
