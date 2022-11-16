@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-employee-form',
@@ -9,8 +9,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class EmployeeFormComponent {
   readonly employeeForm: FormGroup = new FormGroup({
-    name: new FormControl(),
-    salary: new FormControl(),
-    age: new FormControl()
+    name: new FormControl(null, [Validators.required]),
+    salary: new FormControl(null, [Validators.required, Validators.min(0)]),
+    age: new FormControl(null, Validators.min(0))
   });
 }
