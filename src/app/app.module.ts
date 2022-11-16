@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeListComponentModule } from "./ui/employee-list/employee-list.component-module";
-import {EmployeesFacesComponentModule} from "./ui/employees-faces/employees-faces.component-module";
-import {EmployeeServiceModule} from "./services/employee.service-module";
-import {ProjectsListComponentModule} from "./ui/projects-list/projects-list.component-module";
-import {ProjectServiceModule} from "./services/project.service-module";
+import { EmployeesFacesComponentModule } from "./ui/employees-faces/employees-faces.component-module";
+import { EmployeeFormComponentModule } from "./ui/employee-form/employee-form.component-module";
+import { EmployeeListComponentModule } from "./ui/employee-list/employee-list.component-module"
+import { ProjectsListComponentModule } from "./ui/projects-list/projects-list.component-module";
+import { EmployeeServiceModule } from "./services/employee.service-module";
+import { ProjectServiceModule } from "./services/project.service-module";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,7 @@ import {ProjectServiceModule} from "./services/project.service-module";
     EmployeeServiceModule,
     ProjectsListComponentModule,
     ProjectServiceModule,
+    EmployeeFormComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
