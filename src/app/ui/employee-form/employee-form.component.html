@@ -4,3 +4,7 @@
   <input type="number" formControlName="age" placeholder="Age" style="margin-right: 10px;">
   <input type="submit" [disabled]="employeeForm.invalid" value="Submit">
 </form>
+
+<div *ngIf="employeeForm.valid">
+  <p>Your new employee: {{ employeeForm.value.name }}, age: {{ employeeForm.value.age }} with salary {{ employeeForm.value.salary }}$ will be added to the system</p>
+</div>
