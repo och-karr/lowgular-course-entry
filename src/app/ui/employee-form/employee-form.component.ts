@@ -24,6 +24,10 @@ export class EmployeeFormComponent {
   // }
 
   onFormSubmitted(form: CreateEmployeeModel) {
-    this._employeeService.create(form).subscribe();
+    this._employeeService.create(form).subscribe({
+      next(response) {
+        alert(`User was successfully added to thedatabase. Name: ${response.name}, age: ${response.age}, salary: ${response.salary}`);
+      }
+    });
   }
 }
