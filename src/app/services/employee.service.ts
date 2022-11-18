@@ -11,9 +11,9 @@ export class EmployeeService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  // getAllPeople(): Observable<PersonModel[]> {
-  //   return this._httpClient.get<PersonModel[]>('/assets/data/people.json');
-  // }
+  getAllPeople(): Observable<PersonModel[]> {
+    return this._httpClient.get<PersonModel[]>('/assets/data/people.json');
+  }
 
   getAll(): Observable<PersonModel[]> {
     return this._httpClient.get<ApiResponse<EmployeeResponse[]>>(
