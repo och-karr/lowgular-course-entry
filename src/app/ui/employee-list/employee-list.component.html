@@ -1,9 +1,9 @@
-<h2>Employee list</h2>
-<h3>{{ companyName }}</h3>
-<ul *ngIf="data$ | async as data; else empty">
-  <li *ngFor="let employee of data">
+<h2 class="mt-4">Employee list</h2>
+<p>{{ companyName }}</p>
+<ul *ngIf="data$ | async as data; else empty" class="list-group list-group-flush">
+  <li *ngFor="let employee of data" class="list-group-item" style="">
     {{ employee.personalNumber }}: {{ employee.name }}, Email: {{ employee.mail }}
-    <button (click)="remove(employee.personalNumber)">Remove</button>
+    <button (click)="remove(employee.personalNumber)" class="btn btn-light">Remove</button>
   </li>
 </ul>
 

@@ -1,8 +1,32 @@
 <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmitted(employeeForm.value)">
-  <input type="text" formControlName="name" placeholder="Name" style="margin-right: 10px;">
-  <input type="number" formControlName="salary" placeholder="Salary" style="margin-right: 10px;">
-  <input type="number" formControlName="age" placeholder="Age" style="margin-right: 10px;">
-  <input type="submit" [disabled]="employeeForm.invalid" value="Submit">
+  <div class="mb-3">
+    <label for="nameFormControl" class="form-label">Name</label>
+    <input type="text"
+           class="form-control"
+           id="nameFormControl"
+           formControlName="name"
+           placeholder="employee's name"
+           style="margin-right: 10px;">
+  </div>
+  <div class="mb-3">
+    <label for="salaryFormControl" class="form-label">Salary</label>
+    <input type="number"
+           class="form-control"
+           id="salaryFormControl"
+           formControlName="salary"
+           placeholder="employee's salary"
+           style="margin-right: 10px;">
+  </div>
+  <div class="mb-3">
+    <label for="ageFormControl" class="form-label">Age</label>
+    <input type="number"
+           class="form-control"
+           id="ageFormControl"
+           formControlName="age"
+           placeholder="employee's age"
+           style="margin-right: 10px;">
+  </div>
+  <input type="submit" [disabled]="employeeForm.invalid" [ngClass]="employeeForm.invalid ? 'btn btn-primary disabled' : 'btn btn-primary'" value="Submit">
 </form>
 
 <div *ngIf="employeeForm.valid">
