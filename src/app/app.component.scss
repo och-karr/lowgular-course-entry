@@ -3,12 +3,40 @@
 }
 
 .container {
-  display: inline-block;
-  padding: 10px 30px;
-  border: 1px solid grey;
+  height: calc(100vh - 150px - 66px);
 }
 
 h1 {
   color: darkcyan;
 }
+
+.navbar {
+  background-color: #B8D3D1;
+  box-shadow: 0px 3px 13px -1px rgba(66, 68, 90, 0.21);
+}
+
+.navbar-brand {
+  color: #1A281F;
+  font-family: Broadway, serif;
+}
+
+.navbar-icon {
+  width: 40px;
+}
+
+.nav-link {
+  color:  #1A281F;
+}
+
+.footer {
+  background-color: #635255;
+  width: 100%;
+  bottom: 0;
+  height: 150px;
+}
+
+.footer-text {
+  color: #C0E8F9;
+}
+
 
