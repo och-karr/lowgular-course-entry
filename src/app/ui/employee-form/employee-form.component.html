@@ -1,4 +1,5 @@
 <div class="container">
+  <h2 class="mt-4">Employee form</h2>
   <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmitted(employeeForm.value)">
     <div class="mb-3">
       <label for="nameFormControl" class="form-label">Name</label>
@@ -29,7 +30,6 @@
     </div>
     <input type="submit" [disabled]="employeeForm.invalid" [ngClass]="employeeForm.invalid ? 'btn btn-primary disabled' : 'btn btn-primary'" value="Submit">
   </form>
-
   <div *ngIf="employeeForm.valid">
     <p>Your new employee: {{ employeeForm.value.name }}, age: {{ employeeForm.value.age }} with salary {{ employeeForm.value.salary }}$ will be added to the system</p>
   </div>
