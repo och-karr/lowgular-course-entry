@@ -4,7 +4,8 @@
   <ul *ngIf="data$ | async as data; else empty" class="list-group list-group-flush">
     <li *ngFor="let employee of data" class="list-group-item" style="">
       {{ employee.personalNumber }}: {{ employee.name }}, Email: {{ employee.mail }}
-      <button (click)="remove(employee.personalNumber)" class="btn btn-light">Remove</button>
+      <button (click)="remove(employee.personalNumber)" class="btn btn-light btn-sm" style="margin-right: 5px;">Remove</button>
+      <a [routerLink]="['/employee-details/' + employee.personalNumber]" class="btn btn-info d-inline-block btn-sm">Details</a>
     </li>
   </ul>
   <ng-template #empty> There is no data </ng-template>
